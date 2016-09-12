@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="Battleships"/>
+        <group name="Battleships">
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/api/ApplicationConfig.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/control/PersonControl.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/web/index.html</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/util/SchemaGenerator.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/api/ApiResource.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/entity/User.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/src/java/control/UserControl.java</file>
+            <file>file:/C:/Users/Daniel/Documents/NetBeansProjects/PShowMeTheWay/web/js/app.js</file>
+        </group>
     </open-files>
 </project-private>

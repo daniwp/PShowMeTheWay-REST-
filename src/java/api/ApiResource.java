@@ -9,8 +9,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import control.PersonControl;
-import entity.Person;
-import java.net.URI;
+import entity.User;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -21,13 +20,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import control.UserControl;
+import javax.ws.rs.core.Response.Status;
 
 /**
  * REST Web Service
  *
  * @author Daniel
  */
-@Path("test")
+@Path("/test")
 public class ApiResource {
 
     @Context
@@ -47,23 +48,23 @@ public class ApiResource {
     @Path("hello/name={name},lastname={lastname}")
     public Response getTest(@PathParam("name") String name, @PathParam("lastname") String lastname) {
         String welcome = "Hello " + name + " " + lastname;
-        return Response.status(Response.Status.OK).entity(gson.toJson(welcome)).build();
+        return Response.status(Status.OK).entity(gson.toJson(welcome)).build();
     }
 
     @GET
     @Path("all")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPersons() {
-        return Response.status(Response.Status.OK).entity(gson.toJson(pc.getPersons())).build();
+        return Response.status(Status.OK).entity(gson.toJson(pc.getPersons())).build();
     }
 
     @POST
     @Path("/add")
     public Response addUser(
-            @FormParam("name") String name,
-            @FormParam("age") int age) {
-        pc.addPerson(new Person(name, age));
-        return Response.noContent().build();
+            @FormParam("username") String username,
+            @FormParam("password") String password) {
+        new UserControl().addUser(new User(username, password));
+        return Response.status(Status.NO_CONTENT).build();
     }
 
 }

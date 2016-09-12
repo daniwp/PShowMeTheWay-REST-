@@ -10,9 +10,5 @@ import javax.persistence.Persistence;
 public class SchemaGenerator {
     public static void main(String[] args) {
         Persistence.generateSchema("PShowMeTheWayPU", null);
-        
-        DataPopulator dp = new DataPopulator();
-        dp.populateTables();
-       
     }
 }
